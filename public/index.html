@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Voice Call App with Speech-to-Text</title>
+    <style>
+        #localTranscription, #remoteTranscription {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 100px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        #localTranscription {
+            background-color: #e6f3ff;
+        }
+        #remoteTranscription {
+            background-color: #fff0e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebRTC Voice Call App with Speech-to-Text</h1>
+    <button id="startCall">Start Call</button>
+    <button id="joinCall">Join Call</button>
+    <input type="text" id="roomId" placeholder="Enter Room ID">
+    <div id="status"></div>
+    <h2>Your Speech</h2>
+    <div id="localTranscription"></div>
+    <h2>Remote Speech</h2>
+    <div id="remoteTranscription"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
